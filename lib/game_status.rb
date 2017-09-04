@@ -14,7 +14,7 @@ def won?(board) do
   players.each do |player|
     WIN_COMBINATIONS.each do |combination|
       if board[combination[0] == player && combination[1] == player && combination[2] == player
-        return combination
+        combination
       end
     end
   end
