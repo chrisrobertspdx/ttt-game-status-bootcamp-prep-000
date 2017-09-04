@@ -42,7 +42,7 @@ def over?(board)
 end
 
 def winner(board)
-  win?(board)[0]
+  won?(board)[0]
 end
 
 # Helper Method
