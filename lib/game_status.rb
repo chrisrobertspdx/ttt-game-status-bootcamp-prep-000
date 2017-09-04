@@ -29,12 +29,12 @@ end
 def draw?(board) do
   if won?(board) != nil
     false
-  elsif !full?(board) 
+  elsif !full?(board)
     false
   else
     true
   end
-end   
+end
 
 # Helper Method
 def position_taken?(board, index)
