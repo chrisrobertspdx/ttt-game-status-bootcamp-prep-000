@@ -21,7 +21,7 @@ def won?(board) do
   nil
 end
 
-def full?(board)
+def full?(board) do
   board.all? do |cell|
     !(cell.nil? || cell == " ")
   end
