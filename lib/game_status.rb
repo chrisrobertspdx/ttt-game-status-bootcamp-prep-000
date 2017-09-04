@@ -23,19 +23,11 @@ end
 
 def full?(board) do
   board.all? do |cell|
-    !(cell.nil? || cell == " ")
+    cell.nil? || cell == " "
   end
 end
 
-def draw?(board) do
-  if won?(board) != nil
-    false
-  elsif !full?(board)
-    false
-  else
-    true
-  end
-end
+
 
 # Helper Method
 def position_taken?(board, index)
