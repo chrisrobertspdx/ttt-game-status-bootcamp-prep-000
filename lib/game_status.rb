@@ -43,11 +43,11 @@ end
 
 def winner(board)
   winpos = won?(board)
-  if winpos 
+  if winpos
     board[winpos[0]]
   else
     winpos
-  ens
+  end
 end
 
 # Helper Method
