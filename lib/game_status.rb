@@ -42,7 +42,12 @@ def over?(board)
 end
 
 def winner(board)
-  board[won?(board)[0]]
+  winpos = won?(board)
+  if winpos 
+    board[winpos[0]]
+  else
+    winpos
+  ens
 end
 
 # Helper Method
