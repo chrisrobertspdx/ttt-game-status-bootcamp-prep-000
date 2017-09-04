@@ -9,7 +9,7 @@ WIN_COMBINATIONS = [
   [2,4,6],
 ]
 
-def won?(board)
+def won?(board) 
   players = ["X","O"]
   players.each do |player|
     WIN_COMBINATIONS.each do |combination|
@@ -21,6 +21,25 @@ def won?(board)
   nil
 end
 
+def full?(board)
+  board.all? do |cell|
+    cell.nil? || cell == " "
+  end
+end
 
+def draw?(board)
+  if won?(board) != nil
+    false
+  elsif !full?(board)
+    false
+  else
+    true
+  end
+end
+
+# Helper Method
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
 
 # Define your WIN_COMBINATIONS constant
