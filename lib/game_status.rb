@@ -24,6 +24,7 @@ end
 def full?(board)
   board.all? do |cell|
     !(cell.nil? || cell == " ")
+  end
 end
 
 def draw?(board) do
