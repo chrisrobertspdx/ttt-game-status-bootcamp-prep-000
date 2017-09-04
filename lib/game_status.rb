@@ -13,8 +13,8 @@ def won?(board) do
   players = ["X","O"]
   players.each do |player|
     WIN_COMBINATIONS.each do |combination|
-      if board[combination[0] == player && combination[1] == player && combination[2] == player
-        combination
+      if board[combination[0]] == player && board[combination[1]] == player && board[combination[2]] == player
+        return combination
       end
     end
   end
