@@ -37,6 +37,14 @@ def draw?(board)
   end
 end
 
+def over(board)
+  won?(board) || draw?(board) || full?(board)
+end
+
+def winner(board)
+  win?(board)[0]
+end
+
 # Helper Method
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
